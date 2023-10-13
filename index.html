@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <link rel="stylesheet" href="estiloGame.css">
+    <script>
+        
+
+        function Iniciar (){
+            var nivel = document.getElementById("nivel").value
+        if(nivel === ""){
+            alert('selecione um nivel')
+            return false
+        }
+          window.location.href = 'JogoMataMosquito.html?' + nivel
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="prlGameOver">
+        <div class="img">
+                <img src="imagens/game.png">
+        </div>
+        <div>
+            <select class="selecao" id="nivel">
+                <option value="">-- Selecione o Nivel --</option>
+                <option value="facil">Facil</option>
+                <option value="normal">Normal</option>
+                <option value="dificil">Dificil</option>
+            </select>
+        </div>
+        <div class="Reiniciar">
+                <button type="button" class="btniniciar" onclick="Iniciar()">Iniciar</button>
+        </div>
+    </div>
+</body>
+</html>
